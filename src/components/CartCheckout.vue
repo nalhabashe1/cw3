@@ -77,7 +77,7 @@ export default {
               },
               body: JSON.stringify(order),
               }).then(response => response.json()).then(alert("The order has been submitted successfully by name: " + this.name + " phone: " + this.phoneNumber))
-              .then(this.updateSpace(order.lessons), console.log(JSON.stringify(order.lessons) ));                
+              .then(this.updateSpace(order.lessons), console.log(JSON.stringify(order.lessons))).then(window.location = "../App.vue");                
             // }).catch((err) => {
             //   console.error(err)
             // })
