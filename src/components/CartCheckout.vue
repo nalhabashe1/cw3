@@ -77,7 +77,7 @@ export default {
               },
               body: JSON.stringify(order),
               }).then(response => response.json()).then(alert("The order has been submitted successfully by name: " + this.name + " phone: " + this.phoneNumber))
-              .then(this.updateSpace(order.lessons), console.log(JSON.stringify(order.lessons))).then(location.reload());                
+              .then(this.updateSpace(order.lessons), console.log(JSON.stringify("updated"+order.lessons))).then(location.reload());                
             // }).catch((err) => {
             //   console.error(err)
             // })

@@ -140,7 +140,7 @@ app.get("/lessons/:id", (req, res, next) => {
 
 //update an object
 app.put("/lessons/:id", (req, res, next) => {
-  req.lessonsCollection.update(
+  req.lessonsCollection.updateOne(
     { _id: new ObjectID(req.params.id) },
     { $set: req.body },
     { safe: true, multi: false },
