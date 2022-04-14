@@ -1,14 +1,12 @@
 <template>
   <div id="app">
     <header
-      class="p-4 flex w-full bg-blue-900 text-white font-semibold justify-between"
-    >
+      class="p-4 flex w-full bg-blue-900 text-white font-semibold justify-between" >
       <h1 class="font-semibold text-center p-2" v-text="sitename"></h1>
       <button
         v-on:click="showCheckout"
         class="bg-green-700 w-40 font-semibold h-10 p-2 rounded-lg"
-        v-if="cartItemCount > 0"
-      >
+        v-if="cartItemCount > 0" >
         {{ cartItemCount }}
         <span class="fas fa-cart-plus"></span>
         View Cart
@@ -56,7 +54,7 @@
       };
     },
     created() {
-      fetch("http://localhost:8000/lessons")
+      fetch("https://nalhabashe-cw3.herokuapp.com/lessons")
         .then((res) => res.json())
         .then((data) => (this.lessons = data));
       // console.log(this.data);

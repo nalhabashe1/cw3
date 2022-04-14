@@ -69,7 +69,7 @@ export default {
               })
             };
 
-            fetch('http://localhost:8000/orders',{
+            fetch('https://nalhabashe-cw3.herokuapp.com/orders',{
               method: 'POST',
               status: 200,
               headers: {
@@ -77,7 +77,7 @@ export default {
               },
               body: JSON.stringify(order),
               }).then(response => response.json()).then(alert("The order has been submitted successfully by name: " + this.name + " phone: " + this.phoneNumber))
-              .then(this.updateSpace(order.lessons), console.log(JSON.stringify(order.lessons))).then(window.location = "../App.vue");                
+              .then(this.updateSpace(order.lessons), console.log(JSON.stringify(order.lessons))).then(window.location);                
             // }).catch((err) => {
             //   console.error(err)
             // })
@@ -89,7 +89,7 @@ export default {
             // const lesson = lessons.map((item) => {
             //   return { _id: item._id, spaces: item.spaces };
               console.log(lessons[i]._id)
-            fetch('http://localhost:8000/lessons' + lessons[i]._id, {
+            fetch('https://nalhabashe-cw3.herokuapp.com/lessons' + lessons[i]._id, {
               method: "PUT",
               status: 200,
               headers: {
