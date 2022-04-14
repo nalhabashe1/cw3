@@ -89,7 +89,7 @@ export default {
             // const lesson = lessons.map((item) => {
             //   return { _id: item._id, spaces: item.spaces };
               console.log(lessons[i]._id)
-            fetch('https://nalhabashe-cw3.herokuapp.com/lessons' + lessons[i]._id, {
+            fetch('https://nalhabashe-cw3.herokuapp.com/lessons/' + lessons[i]._id, {
               method: "PUT",
               status: 200,
               headers: {
